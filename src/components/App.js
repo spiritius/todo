@@ -1,21 +1,22 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import data from './data.js';
-import TaskList from './TaskList'
+import List from './List';
 
-
-class App extends React.Component {
+export default class App extends React.Component {
 	state = {
-		tasks: data
+		data: data
 	}
 
 	render() {
 		return (
 			<div className="container">
 				<h1 className="h4">list of tasks</h1>
-				<TaskList data={this.state.tasks}/>
+				<List data={this.state.data}/>
 			</div>
 		)
 	}
 }
 
-export default App;
+
+ReactDOM.render(<App />, document.getElementById('root'));

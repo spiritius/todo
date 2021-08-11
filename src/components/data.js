@@ -1,4 +1,4 @@
-export default [
+const data = [
 	{
 		id: 1,
 		createDate: '12.01.2021 13:00',
@@ -11,4 +11,5 @@ export default [
 		title: 'drink tea, get a nap',
 		isDone: false,
 	},
-]
+];
+export default data;
