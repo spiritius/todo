@@ -10,17 +10,20 @@ export default class List extends React.Component {
 		this.itemChanged = this.itemChanged.bind(this);
 	}
 
-	itemChanged = (id, title, createDate, isDone) => {
+	itemChanged = (item) => {
+		// console.log('--- ' + item.title);
+		// console.log('--- ' + !item.isDone);
 		const temp = this.state.data;
 		for (let i=0; i <= temp.length; i++) {
-			if (temp[i].id == id) {
-				temp[i].title = title;
-				temp[i].createDate = createDate;
-				temp[i].isDone = isDone;
+			if (temp[i].id == item.id) {
+				temp[i].title = item.title;
+				temp[i].createDate = item.createDate;
+				temp[i].isDone = !item.isDone;
 				break;
 			}
 		}
 		this.setState({data: temp});
+		console.log('-- outside: ' + this.state.data[0].title);
 	}
 
 	renderList() {
@@ -29,7 +32,7 @@ export default class List extends React.Component {
 
 		if (data.length) {
 			items = data.map((item) => {
-				return (<Item key={item.id} data={item} onChange={(id, title, createDate, isDone) => this.itemChanged(id, title, createDate, isDone)} />)
+				return (<Item key={item.id} data={item} onChange={(item) => this.itemChanged(item)} />)
 			});
 		} else {
 			items = <p>Hooray! All done.</p>
