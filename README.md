@@ -5,6 +5,8 @@
 - изменение статуса таски по клику на чекбокс;
 - все изменения сохраняются в localStorage.
 
+Демо: [https://spiritius.net/frontend/react/todo/](https://spiritius.net/frontend/react/todo/)
+
 ---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
