@@ -5,10 +5,11 @@
 - изменение статуса таски по клику на чекбокс;
 - все изменения сохраняются в localStorage.
 
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### `npm start`
-### `npm test`
-### `npm run build`
-### `npm run eject`
+#### `npm start`
+#### `npm test`
+#### `npm run build`
+#### `npm run eject`
